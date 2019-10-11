@@ -20,7 +20,7 @@ class UserController extends ApiController
             User::all()
         );
 
-        return $collection;
+        return $this->showAll($collection);
     }
 
    
@@ -33,7 +33,7 @@ class UserController extends ApiController
      */
     public function show(User $user)
     {
-        return $user;
+        return $this->showOne($user);
     }
 
 }
